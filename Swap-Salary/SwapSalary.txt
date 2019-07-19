@@ -4,5 +4,5 @@ when 'm' then 'f'
 else 'm'
 end
 
-¿´µ½ÁíÒ»ÖÖ·½·¨
+çœ‹åˆ°å¦ä¸€ç§æ–¹æ³•
 update salary set sex = IF (sex = "m", "f", "m");
