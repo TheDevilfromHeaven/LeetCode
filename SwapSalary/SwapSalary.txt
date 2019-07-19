@@ -1,0 +1,8 @@
+update salary set sex = 
+case sex
+when 'm' then 'f'
+else 'm'
+end
+
+看到另一种写法
+update salary set sex = IF (sex = "m", "f", "m");
