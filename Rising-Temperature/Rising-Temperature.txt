@@ -1,4 +1,4 @@
-参考官方的解法
+鍙傝�冨畼鏂圭殑瑙ｆ硶
 select Weather.Id as Id from Weather
 join
 Weather t1 on datediff(Weather.RecordDate ,t1.RecordDate) = 1
