@@ -43,23 +43,22 @@ public class UniqueMorseCodeWords {
         return set.size();
 
         /**
-         *记录一个简单的、速度更快的方法
+         *官方的方法
          */
-        /*List<String> list = new ArrayList<String>();
-        String[] pw = new String[] { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
-                ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--",
-                "--.." }; // (char)'a' == 97
-        for (String str : words) {
-            char[] arr = str.toCharArray();
-            StringBuilder sb = new StringBuilder();
-            for (char c : arr) {
-                sb.append(pw[(int)c - 97]);
-            }
-            String s = sb.toString();
-            if (!list.contains(s)) list.add(s);
+        /*String[] MORSE = new String[]{".-","-...","-.-.","-..",".","..-.","--.",
+                "....","..",".---","-.-",".-..","--","-.",
+                "---",".--.","--.-",".-.","...","-","..-",
+                "...-",".--","-..-","-.--","--.."};
+
+        Set<String> seen = new HashSet();
+        for (String word: words) {
+            StringBuilder code = new StringBuilder();
+            for (char c: word.toCharArray())
+                code.append(MORSE[c - 'a']);
+            seen.add(code.toString());
         }
 
-        return list.size();*/
+        return seen.size();*/
     }
 
     public static void main(String[] args) {
