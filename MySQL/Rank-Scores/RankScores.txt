@@ -1,0 +1,6 @@
+作者：zazalumonster
+链接：https://leetcode-cn.com/problems/two-sum/solution/mysqlbi-jiao-hao-li-jie-de-yi-chong-xie-fa-by-zaza/
+select 
+    a.Score as score , 
+    (select count(distinct b.Score) from Scores b where b.Score >=a.Score) as rank
+from Scores a order by Score DESC;
