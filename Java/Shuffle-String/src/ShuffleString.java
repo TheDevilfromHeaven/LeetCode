@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 public class ShuffleString {
     public String restoreString(String s, int[] indices) {
         char[] result = new char[indices.length];
