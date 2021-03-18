@@ -1,18 +1,36 @@
 public class FlippingAnImage {
     public int[][] flipAndInvertImage(int[][] A) {
+        /*
+         * 提交后发现两年前做过，但是已经没有一点记忆了。
+         * */
+        public int[][] flipAndInvertImage(int[][] image) {
+            for (int line = 0; line < image.length; line++){
+                int i = 0;
+                int j = image[line].length - 1;
+                while (i <= j){
+                    int swap = image[line][i] ^ 1;
+                    image[line][i] = image[line][j] ^ 1;
+                    image[line][j] = swap;
+                    i++;
+                    j--;
+                }
+            }
+            return image;
+        }
+
         /**
          * 存在问题，new数组B处很容易出问题。
          */
-        int[][] B = new int[A.length][A.length];
-        for (int i = 0;i<A.length;i++){
-            int x = 0;
-            for (int j = A[i].length-1;j >= 0;j--){
-                if(A[i][j] == 1) B[i][x] = 0;
-                else B[i][x] = 1;
-                x++;
-            }
-        }
-        return B;
+//        int[][] B = new int[A.length][A.length];
+//        for (int i = 0;i<A.length;i++){
+//            int x = 0;
+//            for (int j = A[i].length-1;j >= 0;j--){
+//                if(A[i][j] == 1) B[i][x] = 0;
+//                else B[i][x] = 1;
+//                x++;
+//            }
+//        }
+//        return B;
 
         /**
          * 官方解法
