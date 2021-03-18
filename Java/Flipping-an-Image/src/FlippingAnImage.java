@@ -1,23 +1,23 @@
 public class FlippingAnImage {
-    public int[][] flipAndInvertImage(int[][] A) {
-        /*
-         * 提交后发现两年前做过，但是已经没有一点记忆了。
-         * */
-        public int[][] flipAndInvertImage(int[][] image) {
-            for (int line = 0; line < image.length; line++){
-                int i = 0;
-                int j = image[line].length - 1;
-                while (i <= j){
-                    int swap = image[line][i] ^ 1;
-                    image[line][i] = image[line][j] ^ 1;
-                    image[line][j] = swap;
-                    i++;
-                    j--;
-                }
+    /*
+     * 提交后发现两年前做过，但是已经没有一点记忆了。
+     * */
+    public int[][] flipAndInvertImage(int[][] image) {
+        for (int line = 0; line < image.length; line++){
+            int i = 0;
+            int j = image[line].length - 1;
+            while (i <= j){
+                int swap = image[line][i] ^ 1;
+                image[line][i] = image[line][j] ^ 1;
+                image[line][j] = swap;
+                i++;
+                j--;
             }
-            return image;
         }
+        return image;
+    }
 
+ //   public int[][] flipAndInvertImage(int[][] A) {
         /**
          * 存在问题，new数组B处很容易出问题。
          */
@@ -43,7 +43,7 @@ public class FlippingAnImage {
                 row[C - 1 - i] = tmp;
             }
         return A;*/
-    }
+//    }
 
     public static void main(String[] args) {
         FlippingAnImage flippingAnImage = new FlippingAnImage();
