@@ -8,6 +8,12 @@ public class RemoveDuplicatesFromSortedList {
         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 
+    /*
+    * 作者：LeetCode-Solution
+      链接：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/solution/shan-chu-pai-xu-lian-biao-zhong-de-zhong-49v5/
+      来源：力扣（LeetCode）
+    * 官方解法一。
+    * */
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null) return head;
         ListNode result = head;
