@@ -8,13 +8,13 @@ public class FindMajorityElementLCCI {
     public int majorityElement(int[] nums) {
         int count = 0;
         int candidate = 0;
-        for (int i = 0; i < nums.length; i++){
-            if (count == 0){
-                candidate = nums[i];
+        for (int num : nums) {
+            if (count == 0) {
+                candidate = num;
             }
-            if (nums[i] == candidate){
+            if (num == candidate) {
                 count++;
-            }else {
+            } else {
                 count--;
             }
         }
