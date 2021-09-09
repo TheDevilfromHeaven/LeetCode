@@ -43,12 +43,7 @@ public class TheKWeakestRowsInAMatrix {
             map.put(i,sum);
         }
         ArrayList<Map.Entry<Integer, Integer>> entries = new ArrayList<>(map.entrySet());
-        Collections.sort(entries, new Comparator<Map.Entry<Integer, Integer>>() {
-            @Override
-            public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2) {
-                return o1.getValue().compareTo(o2.getValue());
-            }
-        });
+        Collections.sort(entries, (o1, o2) -> o1.getValue().compareTo(o2.getValue()));
         int[] result = new int[k];
         for (int x = 0; x < k; x++){
             result[x] = entries.get(x).getKey();
